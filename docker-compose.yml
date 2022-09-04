@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+    radicale:
+        image: radicale   
+        container_name: radicale
+        build:
+            context: ./
+        networks:
+            - proxy
+        environment:
+            - RAD_UID='1000'
+            - RAD_GID='1000'
+        volumes:
+            - ./radicale:/home/radicale/.config/radicale
+networks:
+    proxy:
+        external: true
