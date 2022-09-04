@@ -1,4 +1,4 @@
-#!/usr//bin/env bash
+#!/usr/bin/env bash
 
 set_id() {
     if [ -n $RAD_UID ]; then
